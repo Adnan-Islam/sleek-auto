@@ -1,0 +1,204 @@
+
+ * { 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background-color: rgb(28, 52, 72);
+}
+
+.logo {
+    width: 12rem;
+    height: 8rem;
+    margin: 3rem 0 0 3rem;
+    place-self: center;
+}
+
+.headline {
+    color: tomato;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 2rem 1rem 0 3rem;
+}
+
+.main-para {
+    color: white;
+    font-size: 1.5rem;
+    padding: 2rem 1rem 0 3rem;
+    margin: 0;
+}
+
+.intro_button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    height: 3.5rem;
+    width: 20rem;
+    padding: 0;
+    margin: 5rem 2rem 5rem 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: tomato;
+}
+
+.intro_button:hover {
+    background-color: rgb(255 99 71 / 0.8);
+    cursor: pointer;
+}
+
+
+
+
+/*login page CSS starts here */
+
+.member {
+    background-color: white;
+    width: auto;
+    height: auto;
+    margin: 3rem 3rem 5rem 3rem;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+form {
+    text-align: center;
+}
+
+input[type=email], 
+input[type=password], 
+#login_button,
+#google_button, 
+#facebook_button {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 85%;
+    height: 3rem;
+    margin: 0.8rem;
+    padding: 0;
+}
+
+input[type=email], 
+input[type=password] {
+    font-size: 0.9rem;
+}
+
+input[type=email]:focus, 
+input[type=password]:focus {
+    border: 2px solid tomato;
+}
+
+#login_button,
+#google_button, 
+#facebook_button {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#login_button:hover, 
+#google_button:hover, 
+#facebook_button:hover {
+    color: tomato;
+    cursor: pointer;
+    border: 2px solid tomato;
+}
+
+.member_para {
+    text-align: center;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.start {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+}
+
+.fa-google, 
+.fa-facebook {
+    font-size: 1.2rem;
+    margin: 0 1rem 0 0;
+}
+
+a {
+    color: rgb(5, 152, 221);
+}
+
+.tc {
+    color: rgb(83, 81, 81);
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+
+
+/* media screen css for different screen sizes */
+
+@media screen and (min-width: 1600px){
+
+    header {
+        grid-template-columns: 2.2fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .member {
+        width: 75%;
+        place-self: center;
+    }
+}
+
+
+
+@media screen and (max-width: 550px){
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .headline {
+        font-size: 2.2rem;
+        padding: 1rem;
+    }
+    
+    .main-para {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    
+    .intro_button {
+        font-size: 1.2rem;
+        height: 3.5rem;
+        width: 15rem;
+        margin: 1rem;
+    }
+
+    .member {
+        margin: 3rem 1.5rem 5rem 1.5rem;
+        width: auto;
+        place-self: center;
+    }
+   
+}

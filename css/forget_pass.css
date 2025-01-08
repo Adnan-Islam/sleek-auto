@@ -1,0 +1,126 @@
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 52, 72);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.forget_pass {
+    height: auto;
+    width: 40%;
+    margin: 5rem 0 5rem 0;
+    place-self: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.forget_pass h1 {
+    font-size: 2rem;
+    color: tomato;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.para {
+    font-size: 1.15rem;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=email] {
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 85%;
+    height: 3rem;
+    margin: 0.5rem 0 2rem 0;
+    padding: 0;
+}
+
+#new_pass_button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 85%;
+    height: 3rem;
+    margin: 0.5rem 0 5rem 0;
+    padding: 0;
+}
+
+#new_pass_button:hover {
+    color: tomato;
+    cursor: pointer;
+    border: 2px solid tomato;
+}
+
+.fa-long-arrow-left {
+    color: black;
+    font-size: 2.5rem;
+    margin: 2rem 0 0 1.5rem;  
+}
+
+
+/* media screen css for different screen sizes */
+
+@media screen and (min-width: 1501px){
+
+    .forget_pass {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1500px){
+
+    .forget_pass {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+
+    .forget_pass {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+
+    .forget_pass {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .forget_pass {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .forget_pass {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+    .forget_pass {
+        width: 90%;
+    }
+}

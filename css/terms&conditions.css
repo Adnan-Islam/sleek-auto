@@ -1,0 +1,91 @@
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 52, 72);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.terms {
+    height: auto;
+    width: 60%;
+    margin: 5rem 0 5rem 0;
+    place-self: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.terms h1 {
+    font-size: 2.5rem;
+    color: tomato;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem 0 1rem;
+}
+
+.para {
+    text-align: justify;
+    margin: 0;
+    padding: 2rem 5rem 0 5rem;
+}
+
+.para:last-child {
+    padding-bottom: 3rem;
+}
+
+.fa-long-arrow-left {
+    color: black;
+    font-size: 2.5rem;
+    margin: 2rem 0 0 5rem;
+    
+}
+
+/* media screen css for different screen sizes */
+
+@media screen and (min-width: 1600px){
+
+    .terms {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .terms {
+        width: 80%;;
+    }
+    .para {
+        padding: 2.5rem;
+    }
+
+    .fa-long-arrow-left {
+        margin: 2rem 0 0 3rem;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+
+    .terms {
+        width: 90%;
+    }
+
+    .terms h1 {
+        font-size: 2rem;
+    }
+
+    .para {
+        padding: 2rem;
+    }
+
+    .fa-long-arrow-left {
+        margin: 2rem 0 0 2rem;
+    }
+}
+
+
+
+

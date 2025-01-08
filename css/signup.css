@@ -1,0 +1,145 @@
+
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 52, 72);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.sign_up {
+    height: auto;
+    width: 40%;
+    margin: 5rem 0 5rem 0;
+    place-self: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 2rem;
+    color: tomato;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0.5rem 0 0.5rem;
+}
+
+.first_para {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+form {
+    text-align: center;
+}
+
+input[type=text],
+input[type=email], 
+input[type=password] {
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 85%;
+    height: 3rem;
+    margin: 0.5rem;
+    padding: 0;
+}
+
+#create_account_button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 85%;
+    height: 3rem;
+    margin: 0.5rem;
+    padding: 0;
+}
+
+#create_account_button:hover {
+    color: tomato;
+    cursor: pointer;
+    border: 2px solid tomato;
+}
+
+a {
+    color: rgb(5, 152, 221);
+}
+
+.tc {
+    text-align: center;
+    color: rgb(83, 81, 81);
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.fa-long-arrow-left {
+    color: black;
+    font-size: 2.5rem;
+    margin: 2rem 0 0 2rem;  
+}
+
+
+/* media screen css for different screen sizes */
+
+@media screen and (min-width: 1501px){
+
+    .sign_up {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1500px){
+
+    .sign_up {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+
+    .sign_up {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+
+    .sign_up {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .sign_up {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .sign_up {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+    .sign_up {
+        width: 90%;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,81 @@
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(6rem, 1fr));
+    gap: 1rem;
+    background-color: aquamarine;
+}
+
+article h1 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 3rem;
+}
+
+.more-about-us-1, .more-about-us-2, .more-about-us-3 {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 5rem 0;
+}
+
+.more-about-us-1 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.more-about-us-2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.more-about-us-3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.notes {
+    font-size: 1.2rem;
+    padding: 0 2rem 0 2rem;
+    text-align: left;
+}
+
+article img {
+    width: 7rem;
+    height: 7rem;
+}
+
+
+/* media screen css for different screen sizes */
+
+@media screen and (max-width: 1200px){
+
+    article h1 {
+        display: grid;
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+} 
+
+@media screen and (max-width: 500px){
+
+    article h1 {
+        display: grid;
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .notes {
+        font-size: 1rem;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    article img {
+        width: 5rem;
+        height: 5rem;
+    }
+} 

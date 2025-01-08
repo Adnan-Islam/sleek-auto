@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/price_list.css">
+        <link rel="stylesheet" href="css/about_us.css">
+        <link rel="stylesheet" href="css/feedback.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="myscript.js"></script>
+        <title>Home || Sleek Auto</title>
+    </head>
+    
+    <body>
+        <header>
+            <div class="introduction" >
+                <img src="image/logo2.png" alt="Logo" class="logo"/>
+                <h1 class="headline">Welcome to Sleek Auto</h1>
+                <p class="main-para">Leave your car to us, we will return you a clean, fresh, and shiny car back 
+                    within quickest time with affordable price - we promise.
+                </p>
+                <p class="main-para"> We offer various types of car washing deals for our customers. Find the best suitable one for your car.</p>
+                <a href="#deals"><button class="intro_button">Find Appropriate Wash</button></a>
+            </div>
+
+            <div class="introduction member">
+                <p class="member_para start">Please login to make a reservation:</p>
+                <form>
+                    <input type="email" placeholder="Email address"/>
+                    <input type="password" placeholder="Password" minlength="8" required/>
+                    <input type="submit" value="Login" id="login_button" />  
+                    <p class="member_para"> Forgot password? <a href="forget_pass.html" id="forget_pass">Reset password</a></p> 
+                    <p class="member_para">Not a member yet? <a href="signup.html">Create account</a></p>
+                    <hr />
+                    <button id="google_button" onclick="google()"><i class="fa fa-google"></i> Login with Google</button>
+                    <a href="https://www.facebook.com/"><button id="facebook_button" onclick="facebook()"><i class="fa fa-facebook"></i> Login with Facebook</button></a>
+                    <p class="member_para tc"><em>By using the service you accept the <a href="terms&conditions.html">Terms & Conditions</a>. 
+                        You can find our Data Privacy Policy <a href="privacy_policy.html">here.</a></em>
+                    </p>  
+                </form>
+            </div>
+        </header>
+
+        <article>
+            <h1>More About Us</h1>
+            <div class="more-about-us-1">
+                <img src="icon/icon1.png" alt="opening hours icon" />
+                <p class="notes">We are open Monday to Friday, from 8:00 hrs to 16:00 hrs, except public holidays.</p>
+            </div>
+
+            <div class="more-about-us-2">
+                <img src="icon/icon2.png" alt="how many customers served icon" />
+                <p class="notes">We serve more than 200 customers every month. 
+                    We have wide range of customers including corporate customers, companys' cars, other individuals and so on.
+                </p>
+            </div>
+
+            <div class="more-about-us-3">
+                <img src="icon/icon3.png" alt="customers feedback icon" />
+                <p class="notes">More than 90% customers provided us positive feedback and recommend to their 
+                    friends and family for our service.
+                </p>
+            </div>
+        </article>
+
+        <section>
+            <h1 id="deals">Choose the best deal for your car wash</h1>
+            <div class="bronze">
+                <img src="image/image1.png" alt="bronze car wash" />
+                <p class="head">Bronze Wash <br> € 30</p>
+                <div class="features">
+                    <p>&#10004;&nbsp;&nbsp; Initial rinse</p>
+                    <p>&#10004;&nbsp;&nbsp; Hand wash using shampoo</p>
+                    <p>&#10004;&nbsp;&nbsp; Gentle rinse</p>
+                    <p>&#10004;&nbsp;&nbsp; Drying with a fan & cloth</p>
+                    <p>&#10004;&nbsp;&nbsp; Drying the door frames</p>
+                    <p>&#10004;&nbsp;&nbsp; Polishing the dashboard</p>
+                </div>
+                <button type="submit" value="submit" class="purchase_button">Make Reservation</button>
+            </div>
+
+            <div class="silver">
+                <img src="image/image3.png" alt="silver car wash" />
+                <p class="head">Silver Wash <br> € 70</p>
+                <div class="features">
+                    <p>&#10004;&nbsp;&nbsp; Includes Bronze wash + </p>
+                    <p>&#10004;&nbsp;&nbsp; Vacuuming of seats, carpets</p>
+                    <p>&#10004;&nbsp;&nbsp; Cleaning of window surfaces</p>
+                    <p>&#10004;&nbsp;&nbsp; Cleaning of running boards</p>
+                    <p>&#10004;&nbsp;&nbsp; Clean the sicky dirts </p>
+                    <p>&#10004;&nbsp;&nbsp; Do other task agreed with customer </p>
+                </div>
+                <button type="submit" value="submit" class="purchase_button">Make Reservation</button>
+            </div>
+
+            <div class="gold">
+                <img src="image/image4.png" alt="gold car wash" />
+                <p class="head">Gold Wash <br> € 120</p>
+                <div class="features">
+                    <p>&#10004;&nbsp;&nbsp; Includes Silver wash + </p>
+                    <p>&#10004;&nbsp;&nbsp; Waxing of paint surfaces</p>
+                    <p>&#10004;&nbsp;&nbsp; Care of all external parts</p>
+                    <p>&#10004;&nbsp;&nbsp; Polishing of dust capsules</p>
+                    <p>&#10004;&nbsp;&nbsp; Rinse engine from the outside</p>
+                    <p>&#10004;&nbsp;&nbsp; Do other task agreed with customer </p>   
+                </div>
+                <button type="submit" value="submit" class="purchase_button">Make Reservation</button>
+            </div>
+        </section>
+
+        <aside>
+            <h1>Let's see what our customers say</h1>
+            <div class="feedback first">
+                <img src="icon/icon4.png" alt="Customer icon" />
+                <p class="customer_feedback">
+                    " I am very pleased with the service of Sleek Auto.
+                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
+                    It is a kind of a text filler tool that is used by the webmaster on the website."
+                </p>
+                <p>- Mr. XYZ <br> Accountant</p>
+            </div>
+
+            <div class="feedback second">
+                <img src="icon/icon5.png" alt="Customer icon" />
+                <p class="customer_feedback">
+                    " The service delivered by Sleek Auto is outstanding.
+                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
+                    It is a kind of a text filler tool that is used by the webmaster on the website."
+                </p>
+                <p>- Mr. ABC <br> Businessman</p>
+            </div>
+
+            <div class="feedback third">
+                <img src="icon/icon6.png" alt="Customer icon" />
+                <p class="customer_feedback">
+                    " I have been Sleek Auto customer for last 6 years.
+                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
+                    It is a kind of a text filler tool that is used by the webmaster on the website."
+                </p>
+                <p>- Mrs. MNO <br> Lawyer</p>
+            </div>
+
+            <div class="feedback fourth">
+                <img src="icon/icon7.png" alt="Customer icon" />
+                <p class="customer_feedback">
+                    " I would say best car washing place in town. 
+                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
+                    It is a kind of a text filler tool that is used by the webmaster on the website."
+                </p>
+                <p>- Mr. MNO <br> Software Engineer</p>
+            </div>
+        </aside>
+        
+        <footer>
+            <h1>Any query? You can reach us at:</h1>
+            <div class="foot-1">
+                <a href="https://www.google.com/maps/place/Oulu/"><img src="icon/icon8.png" alt="Customer icon" /></a><br>
+                <p>Oulu, Finland</p>
+            </div>
+            <div class="foot-2">
+                <a href="mailto:youremail@example.com"><img src="icon/icon9.png" alt="Customer icon" /></a><br>
+                <p>someone@example.com</p>
+            </div>
+            <div class="foot-3">
+                <a href=""><img src="icon/icon10.png" alt="Customer icon" /></a><br>
+                <p>+358 000 000000</p>
+            </div>
+            <div class="foot-4">
+                <a href="https://www.facebook.com/"><img src="icon/icon11.png" alt="Customer icon" /></a>
+                <a href="https://www.youtube.com/"><img src="icon/icon12.png" alt="Customer icon" /></a>
+                <a href="https://x.com/"><img src="icon/icon13.png" alt="Customer icon" /></a>
+                <a href="https://www.instagram.com/"><img src="icon/icon14.png" alt="Customer icon" /></a>
+                <p>Follow Us</p>
+            </div>
+        </footer>
+        <p class="copy-right">All rights resereved. Copyright<i class="fa fa-copyright">2024 - Adnan Islam</i></p>
+    </body>
+</html>
