@@ -23,7 +23,7 @@ body {
     color: tomato;
     text-align: center;
     margin: 0;
-    padding: 0 1rem 0 1rem;
+    padding: 1.5rem 1rem 0 1rem;
 }
 
 .para {
@@ -34,12 +34,6 @@ body {
 
 .para:last-child {
     padding-bottom: 3rem;
-}
-
-.fa-long-arrow-left {
-    color: black;
-    font-size: 2.5rem;
-    margin: 2rem 0 0 5rem;  
 }
 
 /* media screen css for different screen sizes */
