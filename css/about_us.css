@@ -63,19 +63,43 @@ article img {
 
 @media screen and (max-width: 500px){
 
-    article h1 {
+    article {
         display: grid;
-        grid-column: 1 / 4;
+        grid-template-columns: 1fr;
+    }
+
+    article h1 {
+        grid-column: 1;
         grid-row: 1;
     }
 
+    .more-about-us-1, .more-about-us-2, .more-about-us-3 {
+        text-align: center;
+        margin: 0;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    .more-about-us-1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .more-about-us-2 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .more-about-us-3 {
+        grid-column: 1;
+        grid-row: 4;
+    }
     .notes {
         font-size: 1rem;
         padding: 0 1rem 0 1rem;
     }
     
     article img {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
     }
 } 
