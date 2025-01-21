@@ -11,7 +11,7 @@ body {
 .privacy {
     height: auto;
     width: 60%;
-    margin: 5rem 0 5rem 0;
+    margin: 5rem 0.5rem 5rem 0.5rem;
     place-self: center;
     background-color: white;
     border-radius: 10px;
@@ -23,42 +23,58 @@ body {
     color: tomato;
     text-align: center;
     margin: 0;
-    padding: 1.5rem 1rem 0 1rem;
+    padding: 2rem 1rem 0 1rem;
 }
 
 .para {
     text-align: justify;
     margin: 0;
-    padding: 2rem 5rem 0 5rem;
+    padding: 1.8rem 5rem 0 5rem;
 }
 
 .para:last-child {
     padding-bottom: 3rem;
 }
 
+
 /* media screen css for different screen sizes */
 
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1601px){
 
     .privacy {
         width: 50%;
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1600px){
 
-   .privacy {
-        width: 80%;;
+    .privacy {
+        width: 60%;;
     }
     .para {
-        padding: 2.5rem;
-    }
-
-    .fa-long-arrow-left {
-        margin: 2rem 0 0 3rem;
+        padding: 1.5rem 3.5rem 0 3.5rem;
     }
 }
 
+@media screen and (max-width: 1000px){
+
+    .privacy {
+        width: 70%;;
+    }
+    .para {
+        padding: 1.5rem 3rem 0 3rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .privacy {
+        width: 80%;;
+    }
+    .para {
+        padding: 1.5rem 2rem 0 2rem;
+    }
+}
 
 @media screen and (max-width: 600px){
 
@@ -69,15 +85,11 @@ body {
     .privacy h1 {
         font-size: 2rem;
     }
+
     .para {
-        padding: 2rem;
+        padding: 1.5rem 1rem 0 1rem;
     }
-    .fa-long-arrow-left {
-        margin: 2rem 0 0 2rem;
-    }
-
 }
-
 
 
 
