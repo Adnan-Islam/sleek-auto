@@ -58,7 +58,6 @@ header {
 
 .member {
     background-color: white;
-    color: black;
     width: auto;
     height: auto;
     margin: 3rem 3rem 5rem 3rem;
@@ -96,6 +95,7 @@ input[type=password] {
 #facebook_button {
     font-size: 1.1rem;
     font-weight: bold;
+    color: black;
     background-color: rgb(241, 241, 241);
 }
 
