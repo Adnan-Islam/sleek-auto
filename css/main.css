@@ -89,16 +89,13 @@ input[type=password] {
     font-size: 0.9rem;
 }
 
-input[type=email]:focus, 
-input[type=password]:focus {
-    border: 2px solid tomato;
-}
 
 #login_button,
 #google_button, 
 #facebook_button {
     font-size: 1.1rem;
     font-weight: bold;
+    background-color: rgb(241, 241, 241);
 }
 
 #login_button:hover, 

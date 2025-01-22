@@ -70,6 +70,7 @@ article img {
     article h1 {
         grid-column: 1;
         grid-row: 1;
+        font-size: 2rem;
     }
 
     .more-about-us-1 {

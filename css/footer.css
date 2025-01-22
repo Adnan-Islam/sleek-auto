@@ -113,6 +113,10 @@ footer img {
         padding: 5rem 1rem 1rem 1rem;
     }
 
+    .foot-1, .foot-2, .foot-3, .foot-4 {
+        justify-items: center;
+    }
+
     .foot-1 {
         grid-column: 1;
         grid-row: 2;
@@ -135,5 +139,14 @@ footer img {
         grid-column: 1;
         grid-row: 5;
         margin: 0 2rem 5rem 2rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+    
+    footer img {
+        width: 2rem;
+        height: 2rem;
     }
 }
