@@ -22,7 +22,7 @@ footer h1 {
 .foot-1, .foot-2, .foot-3, .foot-4 {
     margin: 3rem 0 5rem 0;
     padding: 0;
-    justify-items: center;
+    text-align: center;
 }
 
 .foot-1 {
@@ -111,10 +111,6 @@ footer img {
         grid-row: 1;
         font-size: 2rem;
         padding: 5rem 1rem 1rem 1rem;
-    }
-
-    .foot-1, .foot-2, .foot-3, .foot-4 {
-        justify-items: center;
     }
 
     .foot-1 {
