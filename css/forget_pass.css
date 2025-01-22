@@ -40,7 +40,7 @@ form {
 input[type=email] {
     font-size: 0.9rem;
     text-align: center;
-    border: 1px solid grey;
+    border: 1px solid black;
     border-radius: 10px;
     width: 85%;
     height: 3rem;
@@ -52,7 +52,9 @@ input[type=email] {
     font-size: 1.1rem;
     font-weight: bold;
     text-align: center;
-    border: 1px solid grey;
+    border: 1px solid black;
+    color: black;
+    background-color: rgb(241, 241, 241);
     border-radius: 10px;
     width: 85%;
     height: 3rem;
