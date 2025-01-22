@@ -18,7 +18,7 @@ section h1 {
 }
 
 .bronze,.silver,.gold {
-    justify-items: center;
+    text-align: center;
     margin: 2rem 2rem 5rem 2rem;
     box-shadow: 0px 0px 6px -1px rgba(5,5,5,0.51);
 }
@@ -61,7 +61,7 @@ section h1 {
     font-size: 1.1rem;
     text-align: left;
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem 1rem 0 2rem;
 }
 
 
@@ -89,27 +89,27 @@ section h1 {
 
 @media screen and (min-width: 1451px){
 
+    .bronze,.silver,.gold {
+        place-self: center;
+        width: 26rem;
+    }
+
     .bronze {
         grid-column: 1;
         grid-row: 2;
-        width: 26rem;
-        place-self: center;
     }
     
     .silver {
         grid-column: 2;
         grid-row: 2;
-        width: 26rem;
-        place-self: center;
     }
     
     .gold {
         grid-column: 3;
         grid-row: 2;
-        width: 26rem;
-        place-self: center;
     } 
 }
+
 @media screen and (max-width: 1450px){
 
     section h1{
@@ -147,30 +147,25 @@ section h1 {
     }
 
     .bronze,.silver,.gold {
-        text-align: center;
+        place-self: center;
+        width: 25rem;
     }
 
     .bronze {
         grid-column: 1;
         grid-row: 2;
-        width: 25rem;
-        place-self: center;
         margin: 2rem 2rem 0 2rem;
     }
     
     .silver {
         grid-column: 1;
         grid-row: 3;
-        width: 25rem;
-        place-self: center;
         margin: 3rem 2rem 0 2rem;
     }
     
     .gold {
         grid-column: 1;
         grid-row: 4;
-        width: 25rem;
-        place-self: center;
         margin: 3rem 2rem 5rem 2rem;
     }  
 }
@@ -185,27 +180,25 @@ section h1 {
     }
 
     .bronze,.silver,.gold {
-        text-align: center;
+        place-self: center;
+        width: 20rem;
     }
 
     .bronze {
         grid-column: 1;
         grid-row: 2;
-        width: 20rem;
         margin: 2rem 2rem 0 2rem;
     }
     
     .silver {
         grid-column: 1;
         grid-row: 3;
-        width: 20rem;
         margin: 3rem 2rem 0 2rem;
     }
     
     .gold {
         grid-column: 1;
         grid-row: 4;
-        width: 20rem;
         margin: 3rem 2rem 5rem 2rem;
     }  
 
