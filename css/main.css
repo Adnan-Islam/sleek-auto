@@ -43,7 +43,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(1.2) brightness(0.6);
+    filter: saturate(1.2) brightness(0.8);
 }
 
 .hero-overlay {
@@ -87,12 +87,12 @@ a {
 }
 
 .logo {
-    width: 3.8rem;
+    width: 4.5rem;
     height: auto;
 }
 
 .brand-text {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .nav-actions {
@@ -147,12 +147,12 @@ a {
     padding: 0.55rem 1.1rem;
     border-radius: 999px;
     font-weight: 800;
-    box-shadow: 0 10px 30px rgba(255, 99, 71, 0.35);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .pill:hover {
     transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .hero-grid {
@@ -230,8 +230,10 @@ a {
     justify-content: center;
 }
 
-.intro_button:hover,
-.ghost_button:hover {
+
+.intro_button:hover {
+    background: black;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     transform: translateY(-1px);
     cursor: pointer;
 }
@@ -241,6 +243,12 @@ a {
     color: #fff;
     border: 1.5px solid rgba(255, 255, 255, 0.35);
     box-shadow: none;
+}
+
+.ghost_button:hover {
+    background: black;
+    transform: translateY(-1px);
+    cursor: pointer;
 }
 
 .hero-badges {
@@ -281,13 +289,14 @@ main {
 .section-heading h1 {
     margin: 0.2rem 0 0 0;
     font-size: clamp(2rem, 3.6vw, 3rem);
-    color: #f6f9ff;
+    color: black;
 }
 
 .section-heading .lede {
     color: var(--muted);
     margin: 0.6rem 0 0 0;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
+    color: black;
 }
 
 .about, .plans, .stories, .login-section {
@@ -295,15 +304,12 @@ main {
 }
 
 .about {
-    background: linear-gradient(180deg, #f7f9fc 0%, #eef4ff 100%);
+    background: white;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.about {
-    padding-bottom: 1.5rem;
+    padding-bottom: 12rem;
 }
 
 .plans {
@@ -320,73 +326,39 @@ main {
 .about-card {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f253c 0%, #102d49 100%);
+    background:  #0d9573;
     border-radius: var(--radius);
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: var(--shadow);
     transition: transform 0.25s ease, border-color 0.25s ease;
     text-align: center;
 }
 
-.about-card.accent-1 {
-    background: linear-gradient(135deg, #0f253c 0%, #1b3e63 60%, rgba(255, 99, 71, 0.45) 100%);
-}
-
-.about-card.accent-2 {
-    background: linear-gradient(135deg, #0f253c 0%, #0f314f 55%, rgba(0, 119, 190, 0.4) 100%);
-}
-
-.about-card.accent-3 {
-    background: linear-gradient(135deg, #0f253c 0%, #163c5d 55%, rgba(255, 184, 79, 0.45) 100%);
-}
-
 .about-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(255, 99, 71, 0.45);
 }
 
-.icon-circle {
-    width: 3rem;
-    height: 3rem;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
+
+.about-card i {
     color: #ffffff;
-    font-size: 1.2rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-    margin: 0 auto;
 }
 
-.icon-circle.accent-1 {
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(255, 99, 71, 0.55));
-}
-
-.icon-circle.accent-2 {
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(0, 140, 255, 0.55));
-}
-
-.icon-circle.accent-3 {
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(255, 184, 79, 0.6));
-}
-
-.about-card h3 {
+.about-card h2 {
     margin: 0.8rem 0 0.4rem 0;
     color: #f6f9ff;
+}
+
+.about-card h2 {
+    font-size: 1.5rem;
 }
 
 .about-card p {
     margin: 0;
     color: #dfe9f7;
+    text-align: left;
+    font-size: 1.10rem;
 }
 
-.about .section-heading h1 {
-    color: #0b1f33;
-}
-
-.about .section-heading .lede {
-    color: #4b5b70;
-}
 
 .login-section {
     background: linear-gradient(130deg, rgba(8, 19, 32, 0.9), rgba(11, 31, 51, 0.95));
@@ -548,7 +520,6 @@ input[type=password] {
         align-items: flex-end;
         padding: 0 0 0.5rem 0;
         gap: 0.5rem;
-        font-size: 1.05rem;
         order: 3;
     }
 
@@ -586,7 +557,6 @@ input[type=password] {
     .top-nav:has(.nav-toggle:checked) .nav-actions {
         order: 3;
         width: 100%;
-        align-items: flex-end;
     }
 }
 
