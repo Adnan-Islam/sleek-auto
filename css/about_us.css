@@ -1,103 +1,32 @@
 
 article {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(6rem, 1fr));
-    gap: 1rem;
-    background-color: aquamarine;
+    display: contents;
 }
 
-article h1 {
-    grid-column: 2;
-    grid-row: 1;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2.5rem;
-    text-transform: capitalize;
-    margin: 0;
-    padding: 3rem;
+.about {
+    position: relative;
 }
 
-.more-about-us-1, .more-about-us-2, .more-about-us-3 {
-    text-align: center;
-    margin: 0;
-    padding: 0 0 5rem 0;
+.about::after {
+    content: "";
+    position: absolute;
+    inset: 10% 8% auto auto;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 99, 71, 0.1), transparent 55%);
+    z-index: 0;
+    pointer-events: none;
 }
 
-.more-about-us-1 {
-    grid-column: 1;
-    grid-row: 2;
+.about-grid {
+    position: relative;
+    z-index: 1;
 }
-
-.more-about-us-2 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.more-about-us-3 {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.notes {
-    text-align: left;
-    font-size: 1.2rem;
-    padding: 0 2rem 0 2rem;
-}
-
-article img {
-    width: 7rem;
-    height: 7rem;
-}
-
-
-/* media screen css for different screen sizes */
-
-@media screen and (max-width: 1200px){
-
-    article h1 {
-        grid-column: 1 / 4;
-        grid-row: 1;
-    }
-} 
 
 @media screen and (max-width: 800px){
-
-    article {
-        display: grid;
-        grid-template-columns: 1fr;
+    .about::after {
+        inset: 4% 4% auto auto;
+        width: 140px;
+        height: 140px;
     }
-
-    article h1 {
-        grid-column: 1;
-        grid-row: 1;
-        font-size: 2rem;
-    }
-
-    .more-about-us-1 {
-        grid-column: 1;
-        grid-row: 2;
-        padding: 0 1rem 0 1rem;
-    }
-    
-    .more-about-us-2 {
-        grid-column: 1;
-        grid-row: 3;
-        padding: 0 1rem 0 1rem;
-    }
-    
-    .more-about-us-3 {
-        grid-column: 1;
-        grid-row: 4;
-        padding: 0 1rem 3rem 1rem;
-    }
-
-    .notes {
-        font-size: 1.2rem;
-        padding: 0 1rem 0 1rem;
-    }
-    
-    article img {
-        width: 4rem;
-        height: 4rem;
-    }
-} 
+}

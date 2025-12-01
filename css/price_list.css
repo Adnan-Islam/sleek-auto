@@ -1,210 +1,119 @@
-section {
+section.plans {
+    background: #ffffff;
+}
+
+.plan-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
-    gap: 0;
-    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
-section h1 {
+.plan-card {
     display: grid;
-    grid-column: 1 / 4;
-    grid-row: 1;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2.5rem;
-    text-transform: capitalize;
+    grid-template-columns: 1.05fr 1.2fr;
+    grid-template-rows: auto auto 1fr auto;
+    align-items: center;
+    text-align: left;
+    column-gap: 1.2rem;
+    row-gap: 0.4rem;
     margin: 0;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    transition: none;
+    width: 100%;
+    justify-self: center;
+    color: #0b1f33;
 }
 
-.bronze,.silver,.gold {
-    text-align: center;
-    margin: 2rem 2rem 5rem 2rem;
-    box-shadow: 0px 0px 6px -1px rgba(5,5,5,0.51);
-}
-
-.bronze {
+.plan-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1 / span 4;
 }
 
-.silver {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.gold {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.bronze:hover,.silver:hover,.gold:hover {
-    border: 3px solid tomato;
-}
-
-.bronze img,.silver img,.gold img {
-    width: 18rem;
-    height: 18rem;
-    margin: 1rem;
+.plan-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    margin: 0.2rem 0 0.6rem 0;
 }
 
 .head {
-    color: tomato;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 1rem 0 0 0;
+    color: var(--tomato);
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: left;
     margin: 0;
+}
+
+.price {
+    color: #0b1f33;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem 0;
 }
 
 .features {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: left;
-    margin: 0;
-    padding: 0.5rem 1rem 0 2rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0 0.4rem 0 0.4rem;
+    color: #4b5b70;
 }
 
+.plan-card > *:not(img) {
+    grid-column: 2;
+}
 
 .purchase_button {
-    color: tomato;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background-color: rgb(241, 241, 241);
-    border: 2px solid tomato;
-    border-radius: 10px;
-    margin: 2rem 0 2rem 0;
-    padding: 0;
-    width: 15rem;
+    color: #0b1625;
+    font-weight: 800;
+    font-size: 1rem;
+    background-color: var(--tomato);
+    border: none;
+    border-radius: 12px;
+    margin: 1rem 0 0 0;
+    width: 50%;
     height: 3rem;
+    box-shadow: 0 10px 30px rgba(255, 99, 71, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .purchase_button:hover {
     cursor: pointer;
-    color: white;
-    background-color: tomato;
-}
-
-
-/* media screen css for different screen sizes */
-
-@media screen and (min-width: 1451px){
-
-    .bronze,.silver,.gold {
-        place-self: center;
-        width: 26rem;
-    }
-
-    .bronze {
-        grid-column: 1;
-        grid-row: 2;
-    }
-    
-    .silver {
-        grid-column: 2;
-        grid-row: 2;
-    }
-    
-    .gold {
-        grid-column: 3;
-        grid-row: 2;
-    } 
-}
-
-@media screen and (max-width: 1450px){
-
-    section h1{
-        grid-column: 1 / 3;
-        grid-row: 1;
-    }
-
-    .bronze {
-        grid-column: 1;
-        grid-row: 2;
-        width: 25rem;
-        place-self: center;
-    }
-    
-    .silver {
-        grid-column: 2;
-        grid-row: 2;
-        width: 25rem;
-        place-self: center;
-    }
-    
-    .gold {
-        grid-column: 1;
-        grid-row: 3;
-        width: 25rem;
-        margin: 0 0 5rem 65%;
-    }  
+    transform: translateY(-1px);
+    box-shadow: 0 14px 38px rgba(255, 99, 71, 0.45);
 }
 
 @media screen and (max-width: 900px){
+    .plan-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 0.8rem;
+        width: 100%;
+    }
 
-    section h1{
+    .plan-card img {
         grid-column: 1;
         grid-row: 1;
+        height: 14rem;
+        min-height: auto;
     }
 
-    .bronze,.silver,.gold {
-        place-self: center;
-        width: 25rem;
+    .plan-card > *:not(img) {
+        grid-column: 1;
     }
 
-    .bronze {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 2rem 2rem 0 2rem;
-    }
-    
-    .silver {
-        grid-column: 1;
-        grid-row: 3;
-        margin: 3rem 2rem 0 2rem;
-    }
-    
-    .gold {
-        grid-column: 1;
-        grid-row: 4;
-        margin: 3rem 2rem 5rem 2rem;
-    }  
-}
-
-@media screen and (max-width: 500px){
-
-    section h1{
-        font-size: 2rem;
-        grid-column: 1;
-        grid-row: 1;
-        padding: 3rem 1rem 1rem 1rem;
-    }
-
-    .bronze,.silver,.gold {
-        place-self: center;
-        width: 20rem;
-    }
-
-    .bronze {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 2rem 2rem 0 2rem;
-    }
-    
-    .silver {
-        grid-column: 1;
-        grid-row: 3;
-        margin: 3rem 2rem 0 2rem;
-    }
-    
-    .gold {
-        grid-column: 1;
-        grid-row: 4;
-        margin: 3rem 2rem 5rem 2rem;
-    }  
-
-    .bronze img,.silver img,.gold img {
-        width: 15rem;
-        height: 15rem;
-        margin: 1rem;
+    .purchase_button {
+        width: 100%;
     }
 }

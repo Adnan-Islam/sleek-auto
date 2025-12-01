@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/price_list.css">
@@ -13,171 +16,225 @@
     </head>
     
     <body>
-        <header>
-            <div class="introduction">
-                <img src="image/logo2.png" alt="Logo" class="logo"/>
-                <h1 class="headline">Welcome to Sleek Auto</h1>
-                <p class="main-para">Leave your car to us, we will return you a clean, fresh, and shiny car back 
-                    within quickest time with affordable price - we promise.
-                </p>
-                <p class="main-para"> We offer various types of car washing deals for our customers. Find the best suitable one for your car.</p>
-                <a href="#deals"><button type="submit" class="intro_button">Find Appropriate Wash</button></a>
-            </div>
-
-            <div class="introduction member" id="login-page">
-                <p class="member_para start">Please login to make a reservation:</p>
-                <form>
-                    <input type="email" placeholder="Email address"/>
-                    <input type="password" placeholder="Password" minlength="8" required/>
-                    <input type="submit" value="Login" id="login_button" />  
-                    <p class="member_para"> Forgot password? <a href="forget_pass.html" id="forget_pass">Reset password</a></p> 
-                    <p class="member_para">Not a member yet? <a href="signup.html">Create account</a></p>
-                    <hr />
-                    <a href="https://www.google.com/"><button type="submit" id="google_button"><i class="fa fa-google"></i> Login with Google</button></a>
-                    <a href="https://www.facebook.com/"><button type="submit" id="facebook_button"><i class="fa fa-facebook"></i> Login with Facebook</button></a>
-                    <p class="member_para tc"><em>By using the service you accept the <a href="terms&conditions.html">Terms & Conditions</a>. 
-                        You can find our Data Privacy Policy <a href="privacy_policy.html">here.</a></em>
-                    </p>  
-                </form>
+        <header class="hero">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="image/car wash video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-shell">
+                <nav class="top-nav">
+                    <div class="brand">
+                        <img src="image/logo2.png" alt="Sleek Auto logo" class="logo"/>
+                        <span class="brand-text">Sleek Auto</span>
+                    </div>
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                    <label for="nav-toggle" class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="nav-actions">
+                        <a class="ghost-link" href="#about">About</a>
+                        <a class="ghost-link" href="#deals">Deals</a>
+                        <a class="ghost-link" href="#feedback">Stories</a>
+                        <a class="pill" href="#login-page">Login</a>
+                    </div>
+                </nav>
+                <div class="hero-grid">
+                    <div class="introduction">
+                        <p class="eyebrow">Propably the best hand car wash in Oulu</p>
+                        <h1 class="headline">Welcome to Sleek Auto</h1>
+                        <p class="main-para">Give us your keys, and we’ll give 
+                            you back a spotless, fresh, showroom-shine car — fast and affordably.
+                            Pick your perfect wash package, and we’ll handle the shine.</p>
+                        <div class="hero-actions">
+                            <a href="#deals" class="intro_button">View Wash Packages</a>
+                            <a href="#login-page" class="ghost_button">Book Your Slot</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <article>
-            <h1>More About Us</h1>
-            <div class="more-about-us-1">
-                <img src="icon/icon1.png" alt="opening hours icon" />
-                <p class="notes">We are open Monday to Friday, from 8:00 hrs to 16:00 hrs, except public holidays. 
-                    We are located in Oulu, Finland.
-                </p>
-            </div>
-
-            <div class="more-about-us-2">
-                <img src="icon/icon2.png" alt="how many customers served icon" />
-                <p class="notes">We serve more than 200 customers every month. 
-                    We have wide range of customers including Doctors, Engineers, corporate customers, media persons, 
-                    other individuals and so on.
-                </p>
-            </div>
-
-            <div class="more-about-us-3">
-                <img src="icon/icon3.png" alt="customers feedback icon" />
-                <p class="notes">More than 90% customers provided positive feedback and recommend us to their 
-                    friends and family for our service.
-                </p>
-            </div>
-        </article>
-
-        <section>
-            <h1 id="deals">Choose the best deal for your car wash</h1>
-            <div class="bronze">
-                <img src="image/image1.png" alt="bronze car wash" />
-                <p class="head">Bronze Wash <br> € 30</p>
-                <div class="features">
-                    <p>&#10004;&nbsp;&nbsp; Initial rinse</p>
-                    <p>&#10004;&nbsp;&nbsp; Hand wash using shampoo</p>
-                    <p>&#10004;&nbsp;&nbsp; Gentle rinse</p>
-                    <p>&#10004;&nbsp;&nbsp; Drying with a fan & cloth</p>
-                    <p>&#10004;&nbsp;&nbsp; Drying the door frames</p>
-                    <p>&#10004;&nbsp;&nbsp; Polishing the dashboard</p>
+        <main>
+            <section id="about" class="about">
+                <div class="section-heading">
+                    <p class="eyebrow">Who we are</p>
+                    <h1>About Us</h1>
+                    <p class="lede">We keep Oulu rolling with careful, human-first car 
+                        care - tailored packages, honest pricing, and a team that loves what clean feels like.</p>
                 </div>
-                <a href="#login-page"><button type="submit" value="submit" class="purchase_button">Make Reservation</button></a>
-            </div>
-
-            <div class="silver">
-                <img src="image/image3.png" alt="silver car wash" />
-                <p class="head">Silver Wash <br> € 70</p>
-                <div class="features">
-                    <p>&#10004;&nbsp;&nbsp; Includes Bronze wash + </p>
-                    <p>&#10004;&nbsp;&nbsp; Vacuuming of seats, carpets</p>
-                    <p>&#10004;&nbsp;&nbsp; Cleaning of window surfaces</p>
-                    <p>&#10004;&nbsp;&nbsp; Cleaning of running boards</p>
-                    <p>&#10004;&nbsp;&nbsp; Clean the sicky dirts </p>
-                    <p>&#10004;&nbsp;&nbsp; Do other task agreed with customer </p>
+                <div class="about-grid">
+                    <div class="about-card">
+                        
+                        <h3>Hours & home base</h3>
+                        <p>Open Monday to Friday, 8:00-16:00, except public holidays. You'll find us right here in Oulu, Finland.</p>
+                    </div>
+                    <div class="about-card">
+                        
+                        <h3>Community trusted</h3>
+                        <p>More than 200 monthly customers - from doctors to engineers to weekend cruisers - rely on us to keep their cars photo-ready.</p>
+                    </div>
+                    <div class="about-card">
+                        
+                        <h3>Five-star feedback</h3>
+                        <p>Over 90% of customers recommend us to friends and family thanks to our careful work and friendly crew.</p>
+                    </div>
                 </div>
-                <a href="#login-page"><button type="submit" value="submit" class="purchase_button">Make Reservation</button></a>
-            </div>
+            </section>
 
-            <div class="gold">
-                <img src="image/image4.png" alt="gold car wash" />
-                <p class="head">Gold Wash <br> € 120</p>
-                <div class="features">
-                    <p>&#10004;&nbsp;&nbsp; Includes Silver wash + </p>
-                    <p>&#10004;&nbsp;&nbsp; Waxing of paint surfaces</p>
-                    <p>&#10004;&nbsp;&nbsp; Care of all external parts</p>
-                    <p>&#10004;&nbsp;&nbsp; Polishing of dust capsules</p>
-                    <p>&#10004;&nbsp;&nbsp; Rinse engine from the outside</p>
-                    <p>&#10004;&nbsp;&nbsp; Do other task agreed with customer </p>   
+            <section class="plans" id="deals">
+                <div class="section-heading">
+                    <p class="eyebrow">Curated packages</p>
+                    <h1>Choose the best deal for your car wash</h1>
+                    <p class="lede">Every package combines precise steps and premium products to keep paint, glass, and cabin surfaces looking sharp.</p>
                 </div>
-                <a href="#login-page"><button type="submit" value="submit" class="purchase_button">Make Reservation</button></a>
-            </div>
-        </section>
+                <div class="plan-grid">
+                    <article class="plan-card bronze">
+                        <img src="image/image1.png" alt="Bronze car wash" />
+                        <div class="plan-header">
+                            <p class="head">Bronze Wash</p>
+                            <p class="price">&euro; 30</p>
+                        </div>
+                        <div class="features">
+                            <p>&#10004;&nbsp;&nbsp; Initial rinse</p>
+                            <p>&#10004;&nbsp;&nbsp; Hand wash using shampoo</p>
+                            <p>&#10004;&nbsp;&nbsp; Gentle rinse</p>
+                            <p>&#10004;&nbsp;&nbsp; Drying with a fan & cloth</p>
+                            <p>&#10004;&nbsp;&nbsp; Drying the door frames</p>
+                            <p>&#10004;&nbsp;&nbsp; Polishing the dashboard</p>
+                        </div>
+                        <a href="#login-page"><button type="submit" value="submit" class="purchase_button">Make Reservation</button></a>
+                    </article>
 
-        <aside>
-            <h1>Let's see what our customers say</h1>
-            <div class="feedback first">
-                <img src="icon/icon4.png" alt="Customer icon" />
-                <p class="customer_feedback">
-                    " I am very pleased with the service of Sleek Auto.
-                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
-                    It is a kind of a text filler tool that is used by the webmaster on the website."
-                </p>
-                <p>- Mr. XYZ <br> Accountant</p>
-            </div>
+                    <article class="plan-card silver">
+                        <img src="image/image3.png" alt="Silver car wash" />
+                        <div class="plan-header">
+                            <p class="head">Silver Wash</p>
+                            <p class="price">&euro; 70</p>
+                        </div>
+                        <div class="features">
+                            <p>&#10004;&nbsp;&nbsp; Includes Bronze wash + </p>
+                            <p>&#10004;&nbsp;&nbsp; Vacuuming of seats, carpets</p>
+                            <p>&#10004;&nbsp;&nbsp; Cleaning of window surfaces</p>
+                            <p>&#10004;&nbsp;&nbsp; Cleaning of running boards</p>
+                            <p>&#10004;&nbsp;&nbsp; Clean stubborn dirt</p>
+                            <p>&#10004;&nbsp;&nbsp; Tailored extras on request</p>
+                        </div>
+                        <a href="#login-page"><button type="submit" value="submit" class="purchase_button">Make Reservation</button></a>
+                    </article>
 
-            <div class="feedback second">
-                <img src="icon/icon5.png" alt="Customer icon" />
-                <p class="customer_feedback">
-                    " The service delivered by Sleek Auto is outstanding.
-                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
-                    It is a kind of a text filler tool that is used by the webmaster on the website."
-                </p>
-                <p>- Mr. ABC <br> Businessman</p>
-            </div>
+                    <article class="plan-card gold">
+                        <img src="image/image4.png" alt="Gold car wash" />
+                        <div class="plan-header">
+                            <p class="head">Gold Wash</p>
+                            <p class="price">&euro; 120</p>
+                        </div>
+                        <div class="features">
+                            <p>&#10004;&nbsp;&nbsp; Includes Silver wash + </p>
+                            <p>&#10004;&nbsp;&nbsp; Waxing of paint surfaces</p>
+                            <p>&#10004;&nbsp;&nbsp; Care of all external parts</p>
+                            <p>&#10004;&nbsp;&nbsp; Polishing of dust capsules</p>
+                            <p>&#10004;&nbsp;&nbsp; Rinse engine from the outside</p>
+                            <p>&#10004;&nbsp;&nbsp; Tailored deep clean extras</p>   
+                        </div>
+                        <a href="#login-page"><button type="submit" value="submit" class="purchase_button">Make Reservation</button></a>
+                    </article>
+                </div>
+            </section>
 
-            <div class="feedback third">
-                <img src="icon/icon6.png" alt="Customer icon" />
-                <p class="customer_feedback">
-                    " I have been Sleek Auto customer for last 6 years.
-                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
-                    It is a kind of a text filler tool that is used by the webmaster on the website."
-                </p>
-                <p>- Mrs. RST <br> Lawyer</p>
-            </div>
+            <section class="stories" id="feedback">
+                <div class="section-heading">
+                    <p class="eyebrow">Driver stories</p>
+                    <h1>Let's see what our customers say</h1>
+                    <p class="lede">Real words from the people who drive away smiling.</p>
+                </div>
+                <div class="story-grid">
+                    <div class="feedback first">
+                        <img src="icon/icon4.png" alt="Customer icon" />
+                        <p class="customer_feedback">
+                            "I am very pleased with the service of Sleek Auto. They leave the paint looking better than new every time."
+                        </p>
+                        <p class="signature">- Mr. XYZ <span>Accountant</span></p>
+                    </div>
 
-            <div class="feedback fourth">
-                <img src="icon/icon7.png" alt="Customer icon" />
-                <p class="customer_feedback">
-                    " I would say the best car washing place in town is Sleek Auto. 
-                    The word Lorem Ipsum is derived from the Latin word which means “pain itself”. 
-                    It is a kind of a text filler tool that is used by the webmaster on the website."
-                </p>
-                <p>- Mr. MNO <br> Software Engineer</p>
-            </div>
-        </aside>
+                    <div class="feedback second">
+                        <img src="icon/icon5.png" alt="Customer icon" />
+                        <p class="customer_feedback">
+                            "The service delivered by Sleek Auto is outstanding. Clean, quick, and always polite."
+                        </p>
+                        <p class="signature">- Mr. ABC <span>Businessman</span></p>
+                    </div>
+
+                    <div class="feedback third">
+                        <img src="icon/icon6.png" alt="Customer icon" />
+                        <p class="customer_feedback">
+                            "I have been a customer for 6 years. They know my car and treat it like their own."
+                        </p>
+                        <p class="signature">- Mrs. RST <span>Lawyer</span></p>
+                    </div>
+
+                    <div class="feedback fourth">
+                        <img src="icon/icon7.png" alt="Customer icon" />
+                        <p class="customer_feedback">
+                            "Best car wash in town. Attention to detail and deep care you can see in the reflections."
+                        </p>
+                        <p class="signature">- Mr. MNO <span>Software Engineer</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="login-section" id="login-page">
+                <div class="login-shell">
+                    <div class="login-copy">
+                        <p class="eyebrow">Members</p>
+                        <h2>Book your next wash</h2>
+                        <p>Securely sign in to reserve a slot that fits your schedule. We'll have the bay ready.</p>
+                    </div>
+                    <div class="member">
+                        <form>
+                            <p class="member_para start">Login to make a reservation</p>
+                            <input type="email" placeholder="Email address" required />
+                            <input type="password" placeholder="Password" minlength="8" required/>
+                            <input type="submit" value="Login" id="login_button" />  
+                            <p class="member_para">Forgot password? <a href="forget_pass.html" id="forget_pass">Reset password</a></p> 
+                            <p class="member_para">Not a member yet? <a href="signup.html">Create account</a></p>
+                            <div class="social-actions">
+                                <a href="https://www.google.com/"><button type="submit" id="google_button"><i class="fa fa-google"></i> Login with Google</button></a>
+                                <a href="https://www.facebook.com/"><button type="submit" id="facebook_button"><i class="fa fa-facebook"></i> Login with Facebook</button></a>
+                            </div>
+                            <p class="member_para tc"><em>By using the service you accept the <a href="terms&conditions.html">Terms & Conditions</a>. 
+                                You can find our Data Privacy Policy <a href="privacy_policy.html">here.</a></em>
+                            </p>  
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
         
         <footer>
             <h1>Any query? You can reach us at:</h1>
             <div class="foot-1">
-                <a href="https://www.google.com/maps/place/Oulu/"><img src="icon/icon8.png" alt="Customer icon" /></a><br>
+                <a href="https://www.google.com/maps/place/Oulu/"><img src="icon/icon8.png" alt="Location icon" /></a><br>
                 <p>Oulu, Finland</p>
             </div>
             <div class="foot-2">
-                <a href="mailto:youremail@example.com"><img src="icon/icon9.png" alt="Customer icon" /></a><br>
+                <a href="mailto:youremail@example.com"><img src="icon/icon9.png" alt="Email icon" /></a><br>
                 <p>someone@example.com</p>
             </div>
             <div class="foot-3">
-                <a href=""><img src="icon/icon10.png" alt="Customer icon" /></a><br>
+                <a href=""><img src="icon/icon10.png" alt="Phone icon" /></a><br>
                 <p>+358 000 000000</p>
             </div>
             <div class="foot-4">
-                <a href="https://www.facebook.com/"><img src="icon/icon11.png" alt="Customer icon" /></a>
-                <a href="https://www.youtube.com/"><img src="icon/icon12.png" alt="Customer icon" /></a>
-                <a href="https://x.com/"><img src="icon/icon13.png" alt="Customer icon" /></a>
-                <a href="https://www.instagram.com/"><img src="icon/icon14.png" alt="Customer icon" /></a>
+                <a href="https://www.facebook.com/"><img src="icon/icon11.png" alt="Facebook icon" /></a>
+                <a href="https://www.youtube.com/"><img src="icon/icon12.png" alt="YouTube icon" /></a>
+                <a href="https://x.com/"><img src="icon/icon13.png" alt="X icon" /></a>
+                <a href="https://www.instagram.com/"><img src="icon/icon14.png" alt="Instagram icon" /></a>
                 <p>Follow Us</p>
             </div>
         </footer>
         <p class="copy-right">Designed and developed by Adnan Islam. <br>
-        All rights resereved. Copyright <i class="fa fa-copyright"></i> 2025</p>
+        All rights reserved. Copyright <i class="fa fa-copyright"></i> 2025</p>
     </body>
 </html>
