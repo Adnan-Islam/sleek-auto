@@ -535,27 +535,58 @@ input[type=password] {
 
 @media screen and (max-width: 780px){
     .top-nav {
+        display: flex;
         flex-direction: row;
         align-items: center;
-        flex-wrap: nowrap;
+        gap: 0.6rem;
     }
 
     .nav-actions {
         display: none;
         width: 100%;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
         padding: 0 0 0.5rem 0;
         gap: 0.5rem;
+        font-size: 1.05rem;
+        order: 3;
     }
 
     .hamburger {
         display: flex;
         margin-left: auto;
+        order: 2;
+    }
+
+    .brand {
+        order: 1;
+        flex: 1;
     }
 
     .nav-toggle:checked + .hamburger + .nav-actions {
         display: flex;
+    }
+
+    .top-nav:has(.nav-toggle:checked) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+
+    .top-nav:has(.nav-toggle:checked) .hamburger {
+        order: 1;
+        align-self: flex-end;
+    }
+
+    .top-nav:has(.nav-toggle:checked) .brand {
+        order: 2;
+        align-self: flex-start;
+    }
+
+    .top-nav:has(.nav-toggle:checked) .nav-actions {
+        order: 3;
+        width: 100%;
+        align-items: flex-end;
     }
 }
 
