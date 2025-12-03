@@ -4,7 +4,7 @@
 }
 
 :root {
-    --tomato: #0d9573;
+    --tomato: tomato;
     --tomato-soft: #ff7c63;
     --deep-navy: #0b1f33;
     --night: #081320;
@@ -14,6 +14,8 @@
     --muted: #adc2de;
     --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     --radius: 18px;
+    --headline-ch: 24ch;
+    --headline-steps: 24;
 }
 
 body {
@@ -193,8 +195,8 @@ a {
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid rgba(255, 255, 255, 0.8);
-    width: 0ch;
-    animation: typing 3s steps(24, end) 0.4s forwards, blink-caret 0.9s step-end infinite;
+    width: 0;
+    animation: typing 3s steps(var(--headline-steps), end) 0.4s forwards, blink-caret 0.9s step-end 3.4s 2 forwards;
 }
 
 .main-para {
@@ -280,8 +282,8 @@ a {
 }
 
 @keyframes typing {
-    from { width: 0ch; }
-    to { width: 24ch; }
+    from { width: 0; }
+    to { width: var(--headline-ch); }
 }
 
 @keyframes blink-caret {
@@ -605,4 +607,13 @@ input[type=password] {
         gap: 0.4rem;
     }
 
+    .headline {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+        --headline-ch: 22ch;
+        --headline-steps: 22;
+        max-width: 100%;
+    }
 }
+
+
+
