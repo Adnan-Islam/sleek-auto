@@ -4,7 +4,7 @@
 }
 
 :root {
-    --tomato: #ff6347;
+    --tomato: #0d9573;
     --tomato-soft: #ff7c63;
     --deep-navy: #0b1f33;
     --night: #081320;
@@ -189,6 +189,12 @@ a {
     font-size: clamp(2.6rem, 5vw, 3.6rem);
     font-weight: 800;
     margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    width: 0ch;
+    animation: typing 3s steps(24, end) 0.4s forwards, blink-caret 0.9s step-end infinite;
 }
 
 .main-para {
@@ -271,6 +277,16 @@ a {
     0% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
     100% { transform: translateY(0); }
+}
+
+@keyframes typing {
+    from { width: 0ch; }
+    to { width: 24ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(255, 255, 255, 0.8); }
 }
 
 main {
