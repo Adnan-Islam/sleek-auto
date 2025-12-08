@@ -322,7 +322,15 @@ main {
 }
 
 .about {
-    background: white;
+    background: 
+  conic-gradient(
+  from 70deg at 70% 40%, 
+  #a7dc9f, 
+  #9fd8b2,
+  #c0ec8b, 
+  #d5f7d8, 
+  #f2eba0,
+  #a2e1b9);
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -344,7 +352,8 @@ main {
 .about-card {
     position: relative;
     overflow: hidden;
-    background:  #0d9573;
+    background:  white;
+    color: black;
     border-radius: var(--radius);
     padding: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -358,21 +367,21 @@ main {
 
 
 .about-card i {
-    color: #ffffff;
+    color: black;
+    font-size: 2rem;
+    display: block;
+    margin: 0 auto 0.5rem auto;
 }
 
-.about-card h2 {
+.about-card h3 {
     margin: 0.8rem 0 0.4rem 0;
-    color: #f6f9ff;
-}
-
-.about-card h2 {
+    color: black;
     font-size: 1.5rem;
 }
 
 .about-card p {
     margin: 0;
-    color: #dfe9f7;
+    color: black;
     text-align: left;
     font-size: 1.10rem;
 }
@@ -579,6 +588,23 @@ input[type=password] {
 }
 
 @media screen and (max-width: 550px){
+    .about {
+        padding: 2.4rem 1rem 3.6rem 1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .about-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .about-card p {
+        text-align: center;
+    }
+
     .hero-shell {
         padding: 1.2rem 1rem 3rem 1rem;
     }
@@ -608,12 +634,14 @@ input[type=password] {
     }
 
     .headline {
-        font-size: clamp(1.3rem, 6vw, 2rem);
-        --headline-ch: 22ch;
-        --headline-steps: 22;
+        font-size: clamp(2rem, 6vw, 2rem);
+        --headline-ch: 18ch;
+        --headline-steps: 18;
         max-width: 100%;
     }
+    .main-para {
+        font-size: 1.2rem;
+        text-align: left;
+        margin: 0 0.5rem 0 0.5rem;
+    }
 }
-
-
-

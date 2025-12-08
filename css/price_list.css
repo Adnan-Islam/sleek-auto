@@ -86,7 +86,7 @@ section.plans {
     background-color: var(--tomato);
     border: none;
     border-radius: 12px;
-    margin: 1rem 0 0 0;
+    margin: 0;
     width: 40%;
     height: 3rem;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -95,7 +95,6 @@ section.plans {
 .purchase_button:hover {
     cursor: pointer;
     transform: translateY(-1px);
-    box-shadow: 0 14px 38px rgba(255, 99, 71, 0.45);
 }
 
 @media screen and (max-width: 900px){
@@ -117,21 +116,23 @@ section.plans {
     .plan-header {
         order: 2;
         width: 100%;
-    }
-
-    .price {
-        order: 3;
+        align-items: flex-start;
     }
 
     .features {
         order: 4;
+        width: 100%;
+    }
+
+    .plan-card a {
+        order: 5;
+        width: 100%;
     }
 
     .purchase_button {
         width: 100%;
-        align-self: flex-start;
+        align-self: stretch;
         margin-top: 0.8rem;
-        order: 5;
     }
 }
 
