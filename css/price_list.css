@@ -1,11 +1,11 @@
 section.plans {
-  background:white;
+  background: white;
 }
 
 .plan-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5rem;
+    gap: 6rem;
     margin: 1.5rem auto 0 auto;
     justify-items: center;
     width: 100%;
@@ -13,23 +13,36 @@ section.plans {
 }
 
 .plan-card {
+    --card-bg: linear-gradient(135deg, #f7f9fc, #eef1f7);
+    --accent: var(--tomato);
+    --text: #0b1f33;
+    --muted: #12314b;
+    --chip-bg: rgba(0, 0, 0, 0.08);
+    --chip-text: #0b1f33;
     display: grid;
-    grid-template-columns: 1.05fr 1.2fr;
+    grid-template-columns: 1.4fr 1fr;
     grid-template-rows: auto auto 1fr auto;
     align-items: center;
     text-align: left;
-    column-gap: 2rem;
-    row-gap: 0.4rem;
+    column-gap: 1.5rem;
+    row-gap: 0.6rem;
     margin: 0;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    transition: none;
+    padding: 1.6rem;
+    background: var(--card-bg);
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-position 6s ease;
     width: 100%;
     justify-self: center;
-    color: #0b1f33;
+    color: var(--text);
+    background-size: 160% 160%;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+    background-position: 100% 50%;
 }
 
 .plan-card img {
@@ -37,23 +50,89 @@ section.plans {
     height: 100%;
     min-height: 220px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 14px;
     grid-column: 1;
     grid-row: 1 / span 4;
     align-items: right;
     margin: 0;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
+
+.plan-card:hover img {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.2);
+}
+
+
+.plan-card:nth-of-type(1) {
+    --card-bg: linear-gradient(135deg, #fff0e9, #ffd9cc);
+    --accent: var(--tomato);
+    --text: #2c1208;
+    --muted: #4b1f12;
+    --chip-bg: rgba(255, 99, 71, 0.14);
+    --chip-text: #2c1208;
+}
+
+.plan-card:nth-of-type(2) {
+    --card-bg: linear-gradient(135deg, #e8f1ff, #d6e9ff);
+    --accent: #3d9dff;
+    --text: #0a1c33;
+    --muted: #0f2f54;
+    --chip-bg: rgba(61, 157, 255, 0.12);
+    --chip-text: #0a1c33;
+}
+.plan-card:nth-of-type(3) {
+    --card-bg: linear-gradient(135deg, #fff4e6, #ffe3cc);
+    --accent: #ff8a3d;
+    --text: #2f1606;
+    --muted: #4f2b18;
+    --chip-bg: rgba(47, 22, 6, 0.12);
+    --chip-text: #2f1606;
+}
+
+
+.plan-card:nth-of-type(5) {
+    --card-bg: linear-gradient(135deg, #e9ffe8, #d1ffd9);
+    --accent: #2fbf71;
+    --text: #0c2413;
+    --muted: #18432a;
+    --chip-bg: rgba(47, 191, 113, 0.14);
+    --chip-text: #0c2413;
+}
+
+.plan-card:nth-of-type(6) {
+    --card-bg: linear-gradient(135deg, #fdf1ff, #f3ddff);
+    --accent: #5d0598;
+    --text: #2d0b3c;
+    --muted: #47145d;
+    --chip-bg: rgba(184, 75, 255, 0.12);
+    --chip-text: #2d0b3c;
+}
+
+.plan-card:nth-of-type(7) {
+    --card-bg: linear-gradient(135deg, #f0f4ff, #dfe6ff);
+    --accent: #2713fd;
+    --text: #0d1133;
+    --muted: #1f2455;
+    --chip-bg: rgba(106, 91, 255, 0.14);
+    --chip-text: #0d1133;
+}
+
+
 
 .plan-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2rem;
-    margin: 0.2rem 0 0.6rem 0;
+    gap: 0.15rem;
+    margin: 0.2rem 0 0.2rem 0;
 }
 
+
 .head {
-    color: var(--tomato);
+    color: var(--accent);
     font-size: 2.5rem;
     font-weight: 900;
     text-align: left;
@@ -61,18 +140,63 @@ section.plans {
 }
 
 .price {
-    color: #0b1f33;
-    font-size: 2rem;
+    color: var(--text);
+    font-size: 2.2rem;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.plan-duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
     margin: 0 0 0.2rem 0;
+    padding: 0.7rem 0.95rem;
+    background: black;
+    color: white;
+    font-weight: 800;
+    border-radius: 12px;
+    width: fit-content;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.plan-duration i {
+    color: white;
+    font-size: 1.3rem;
 }
 
 .features {
+    list-style: none;
     font-size: 1rem;
     text-align: left;
-    margin: 0 0 0.5rem 0;
-    padding: 0 0.4rem 0 0.4rem;
-    color: black;
+    margin: 0;
+    padding: 0;
+    color: var(--muted);
+    display: grid;
+    gap: 0.35rem;
+}
+
+.features li {
+    position: relative;
+    padding-left: 1.6rem;
+}
+
+.features li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 900;
 }
 
 .plan-card > *:not(img) {
@@ -81,20 +205,22 @@ section.plans {
 
 .purchase_button {
     color: white;
-    font-weight: 800;
-    font-size: 1rem;
-    background-color: var(--tomato);
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: var(--accent);
     border: none;
     border-radius: 12px;
-    margin: 0;
-    width: 40%;
-    height: 3rem;
+    margin: 0.5rem 0 0 0;
+    padding: 1rem;
+    width: 60%;
+    height: auto;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .purchase_button:hover {
     cursor: pointer;
     transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
 }
 
 @media screen and (max-width: 900px){
@@ -111,12 +237,19 @@ section.plans {
         height: auto;
         min-height: 12rem;
         order: 1;
+        margin: 0 0 0 0;
     }
 
     .plan-header {
         order: 2;
         width: 100%;
         align-items: flex-start;
+    }
+
+    .plan-duration {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .features {
@@ -139,6 +272,7 @@ section.plans {
 @media screen and (min-width: 901px){
     .plan-card {
         column-gap: 2rem;
+        padding: 2rem;
     }
 
     .plan-card img {

@@ -1,10 +1,10 @@
-
 article {
     display: contents;
 }
 
 .about {
     position: relative;
+    padding-bottom: 6rem;
 }
 
 .about::after {
@@ -21,6 +21,90 @@ article {
 .about-grid {
     position: relative;
     z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.8rem;
+}
+
+.about-card {
+    text-align: left;
+}
+
+.about-card i {
+    display: block;
+    margin: 0 auto 0.75rem auto;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.about-card h3 {
+    text-align: center;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.35rem;
+}
+
+.about-card li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: black;
+}
+
+.about-card li::before {
+    content: "\2192";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    font-weight: 900;
+}
+
+.about-cta {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin: 5rem 0 0 0;
+    border-radius: 12px;
+    background: black;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    border: 1px solid black;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 900px){
+    .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px){
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-button {
+        width: 100%;
+        max-width: 320px;
+        font-size: 1rem;
+        padding: 0.85rem 1.2rem;
+    }
 }
 
 @media screen and (max-width: 800px){
